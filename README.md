@@ -1,43 +1,62 @@
-# Astro Starter Kit: Minimal
+# Emilio De La Peña Chacón - Developer Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A fast, static portfolio website built with [Astro](https://astro.build/) and [Tailwind CSS v4](https://tailwindcss.com/). It is designed to showcase my backend engineering experience (Java, Spring Boot, PostgreSQL) alongside modern frontend capabilities.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Tech Stack
 
-## 🚀 Project Structure
+- **Framework**: Astro (Static Site Generation)
+- **Styling**: Tailwind CSS v4
+- **Content Management**: Astro Content Collections (Markdown)
+- **Deployment**: Netlify via GitHub Actions (CI/CD)
 
-Inside of your Astro project, you'll see the following folders and files:
+## 💻 Local Development
+
+To run this project locally, make sure you have Node.js version 22+ installed.
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+3. Open your browser and navigate to `http://localhost:4321`.
+
+## 📁 Project Structure
 
 ```text
 /
-├── public/
+├── public/                 # Static assets (images, fonts, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/         # Reusable Astro UI components (Hero, FeaturedProject, etc.)
+│   ├── content/            # Markdown files for portfolio projects
+│   ├── layouts/            # Global HTML wrapper
+│   ├── pages/              # Routing (index.astro)
+│   └── styles/             # Global CSS and Tailwind theme configurations
+├── .github/workflows/      # CI/CD deployment pipeline to Netlify
+└── astro.config.mjs        # Astro configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 📝 Adding New Projects
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+This portfolio uses Astro Content Collections to manage projects. To add a new project, simply create a new Markdown file in the `src/content/projects/` directory.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Example `src/content/projects/my-new-project.md`:
 
-## 🧞 Commands
+```markdown
+---
+title: "My New API"
+description: "A high-performance REST API built with Spring Boot."
+githubUrl: "https://github.com/EmilioChacon/repo"
+tags: ["Java 21", "Spring Boot", "Docker"]
+order: 6
+---
+```
+The site will automatically parse this markdown file and render it on the homepage in the correct order.
 
-All commands are run from the root of the project, from a terminal:
+## 🚢 Deployment (CI/CD)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+This project uses a Continuous Integration/Continuous Deployment (CI/CD) pipeline via GitHub Actions.
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Any code pushed to the `main` branch will automatically trigger the `.github/workflows/deploy.yml` workflow, which builds the static Astro site and pushes it directly to Netlify.
