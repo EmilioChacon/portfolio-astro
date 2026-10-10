@@ -1,0 +1,38 @@
+---
+// src/components/Header.astro
+---
+
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT 1: TopNavBar (Floating Island)                          -->
+<!-- ========================================================================= -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl rounded-full z-50 bg-surface-container-lowest/90 dark:bg-inverse-surface/90 backdrop-blur-md border border-outline-variant/40 dark:border-outline/40">
+<div class="h-[60px] px-6 flex items-center justify-between w-full">
+<!-- Brand Anchor without generic dot -->
+<a class="flex items-center gap-2.5 group active:scale-[0.98] transition-transform duration-100" href="#about">
+<span class="text-title-md font-title-md font-semibold tracking-tight text-on-surface dark:text-inverse-on-surface">Emilio Chacón</span>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-7">
+<a class="text-label-sm font-label-sm text-primary dark:text-inverse-primary font-semibold border-b border-primary dark:border-inverse-primary pb-0.5 active:scale-[0.98] transition-transform duration-100" href="#about">About</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors active:scale-[0.98]" href="#projects">Projects</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors active:scale-[0.98]" href="#experience">Experience</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors active:scale-[0.98]" href="#skills">Skills</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors active:scale-[0.98]" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Cluster -->
+<div class="flex items-center gap-3">
+<!-- Subtle Language Toggle (EN) -->
+<button class="px-2.5 py-1 text-label-sm font-label-sm font-semibold rounded-full border border-outline-variant/40 bg-surface-container-lowest text-on-surface hover:border-primary-container transition-colors" title="Change language" type="button">
+EN
+</button>
+<!-- Discreet Settings Wheel Icon -->
+<button class="p-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Preferences" type="button">
+<span class="material-symbols-outlined text-[18px] block">settings</span>
+</button>
+<!-- Primary Action -->
+<a class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-primary-container text-on-primary text-label-sm font-label-sm hover:bg-primary transition-colors active:scale-[0.98] duration-100" href="#contact">
+<span class="">Download CV</span>
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</a>
+</div></div>
+</header>
