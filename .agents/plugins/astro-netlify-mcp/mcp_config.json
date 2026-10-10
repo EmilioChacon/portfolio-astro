@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "astro-docs": {
+      "url": "https://mcp.docs.astro.build/mcp"
+    },
+    "netlify": {
+      "url": "https://netlify-mcp.netlify.app/mcp"
+    }
+  }
+}
