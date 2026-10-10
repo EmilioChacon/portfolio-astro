@@ -36,7 +36,8 @@ Ready for immediate technical interviews and coding reviews.
 </div>
 <!-- Right: Clean Minimal Contact Form -->
 <div class="lg:col-span-7 bg-surface-container-lowest border border-outline-variant/40 p-6 md:p-8 rounded-3xl shadow-sm">
-<form class="space-y-4" onsubmit="event.preventDefault(); alert('Message noted! Thank you for reaching out.');">
+<!-- Netlify Form -->
+<form class="space-y-4" name="contact" method="POST" data-netlify="true" netlify-honeypot="honeypot">
 <!-- Honeypot for spam mitigation -->
 <div aria-hidden="true" class="hidden">
 <label class="" for="honeypot">If you are human, leave this field empty:</label>
@@ -45,20 +46,20 @@ Ready for immediate technical interviews and coding reviews.
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div>
 <label class="block text-label-md font-label-md text-on-surface mb-1 font-medium" for="fullname">Full Name</label>
-<input class="w-full text-body-sm font-body-sm rounded-xl border border-outline-variant bg-surface-container-lowest px-3.5 py-2.5 text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" id="fullname" placeholder="e.g. Elena Rostova" required="" type="text">
+<input class="w-full text-body-sm font-body-sm rounded-xl border border-outline-variant bg-surface-container-lowest px-3.5 py-2.5 text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" id="fullname" name="fullname" placeholder="e.g. Elena Rostova" required="" type="text">
 </div>
 <div>
 <label class="block text-label-md font-label-md text-on-surface mb-1 font-medium" for="email">Contact Email</label>
-<input class="w-full text-body-sm font-body-sm rounded-xl border border-outline-variant bg-surface-container-lowest px-3.5 py-2.5 text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" id="email" placeholder="name@company.com" required="" type="email">
+<input class="w-full text-body-sm font-body-sm rounded-xl border border-outline-variant bg-surface-container-lowest px-3.5 py-2.5 text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" id="email" name="email" placeholder="name@company.com" required="" type="email">
 </div>
 </div>
 <div>
 <label class="block text-label-md font-label-md text-on-surface mb-1 font-medium" for="company">Company (Optional)</label>
-<input class="w-full text-body-sm font-body-sm rounded-xl border border-outline-variant bg-surface-container-lowest px-3.5 py-2.5 text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" id="company" placeholder="Organization or project name" type="text">
+<input class="w-full text-body-sm font-body-sm rounded-xl border border-outline-variant bg-surface-container-lowest px-3.5 py-2.5 text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" id="company" name="company" placeholder="Organization or project name" type="text">
 </div>
 <div>
 <label class="block text-label-md font-label-md text-on-surface mb-1 font-medium" for="message">Message</label>
-<textarea class="w-full text-body-sm font-body-sm rounded-xl border border-outline-variant bg-surface-container-lowest px-3.5 py-2.5 text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" id="message" placeholder="Share details regarding your backend role, technical challenges, or requirements..." required="" rows="4"></textarea>
+<textarea class="w-full text-body-sm font-body-sm rounded-xl border border-outline-variant bg-surface-container-lowest px-3.5 py-2.5 text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" id="message" name="message" placeholder="Share details regarding your backend role, technical challenges, or requirements..." required="" rows="4"></textarea>
 </div>
 <button class="w-full py-3 px-6 rounded-xl bg-primary-container text-on-primary text-title-md font-title-md hover:bg-primary transition-colors flex items-center justify-center gap-2 active:scale-[0.99]" type="submit">
 <span class="">Send Message</span>
